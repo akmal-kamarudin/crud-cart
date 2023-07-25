@@ -5,9 +5,9 @@
   "license": "MIT",
   "scripts": {
     "start": "node index.js",
-    "heroku-postbuild": "cd contact-app && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon ./index.js"
+    "dev": "nodemon ./index.js",
+    "client": "cd crud-client && yarn dev"
   },
   "dependencies": {
     "cors": "^2.8.5",

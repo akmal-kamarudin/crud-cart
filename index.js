@@ -7,9 +7,10 @@ const app = express();
 const config = {
   authRequired: false,
   auth0Logout: true,
-  secret: "e206b769598200650da69a3944b4da2e23ed7420c8d7c906df1f3c7849c1081f", //random secret
+  secret: "a long, randomly-generated string stored in env",
+  // secret: "e206b769598200650da69a3944b4da2e23ed7420c8d7c906df1f3c7849c1081f", //random secret
   baseURL: "http://localhost:3000",
-  clientID: "GVMPSsrj0aTeBti4rexbxbDBqnFyKj5T",
+  clientID: "xVp4Pr9GKQtolrOj3qkqM8Sg0m0TrTFj",
   issuerBaseURL: "https://akmal-busy.us.auth0.com",
 };
 

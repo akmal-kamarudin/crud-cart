@@ -1,8 +1,6 @@
 import items from "../lib/ItemShop";
 
 const Carousel = () => {
-  console.log(items[0].pic);
-
   return (
     <div className="carousel w-full md:w-3/5 shadow-xl my-8">
       <div id="slide1" className="carousel-item relative w-full">

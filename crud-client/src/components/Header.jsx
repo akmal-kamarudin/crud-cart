@@ -1,8 +1,24 @@
+import { useState, useContext } from "react";
+import CrudContext from "../context/CrudContext";
 import avatar from "../assets/businessman.svg";
 import logo from "../assets/shop.svg";
 import { AiOutlineShoppingCart, AiOutlineMenu } from "react-icons/ai";
 
 const Header = () => {
+  const [login, setLogin] = useState(false);
+
+  const { loginStatus } = useContext(CrudContext);
+
+  const loginClick = () => {
+    if (login) {
+      setLogin(false);
+    } else {
+      setLogin(true);
+    }
+
+    loginStatus();
+  };
+
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -82,10 +98,15 @@ const Header = () => {
                 </a>
               </li>
               <li>
-                <a>Settings</a>
-              </li>
-              <li>
-                <a>Logout</a>
+                {login ? (
+                  <a onClick={() => loginClick()} href="#">
+                    Logout
+                  </a>
+                ) : (
+                  <a onClick={() => loginClick()} href="#">
+                    Register/Login
+                  </a>
+                )}
               </li>
             </ul>
           </div>

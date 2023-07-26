@@ -3,6 +3,7 @@
 const express = require("express");
 const { auth, requiresAuth } = require("express-openid-connect");
 const app = express();
+const cors = require("cors");
 
 const config = {
   authRequired: false,
@@ -15,6 +16,7 @@ const config = {
 };
 
 // auth router attaches /login, /logout, and /callback routes to the baseURL
+app.use(cors());
 app.use(auth(config));
 
 // req.isAuthenticated is provided from the auth router

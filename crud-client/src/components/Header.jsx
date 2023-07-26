@@ -34,7 +34,7 @@ const Header = () => {
             className="btn btn-ghost normal-case text-xl"
           >
             <img src={logo} className="w-12" />
-            <h1 className="font-bold text-xl lg:text-3xl">SHINY SHOP</h1>
+            <h1 className="font-bold text-xl lg:text-3xl">SHINY SHOES</h1>
           </a>
         </div>
       </div>

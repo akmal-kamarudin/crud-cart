@@ -7,7 +7,7 @@ const Homepage = () => {
   const renderItems = itemShop.map((items, index) => {
     return (
       <React.Fragment key={index}>
-        <div className="flex flex-col items-center w-full">
+        <div className="flex flex-col items-center">
           <Cards item={items} />
         </div>
       </React.Fragment>
@@ -29,7 +29,7 @@ const Homepage = () => {
       <p className="font-semibold text-lg mt-4 lg:text-xl text-slate-600">
         New items for all categories, add to your cart today.
       </p>
-      <div className="flex flex-row flex-wrap place-content-center sm:place-content-stretch gap-x-8">
+      <div className="flex flex-row flex-wrap place-content-center sm:place-content-stretch gap-8 my-8">
         {renderItems}
       </div>
     </div>

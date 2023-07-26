@@ -1,21 +1,33 @@
 const ItemShop = [
   {
-    name: "Blouse",
-    price: 43.0,
-    pic: "Jan 2018 — May 2018",
-    multiplier: 1,
+    name: "Paris loafer",
+    price: 5200.78,
+    pic: "https://assets.hermes.com/is/image/hermesproduct/paris-loafer--231939ZA79-worn-1-0-0-800-800_g.jpg",
+    desc: "Loafer in patinated goatskin with signature 'H' detail. For a chic look.",
   },
   {
-    name: "Stockins",
-    price: 1.3,
-    pic: "Jul 2021 - Feb 2023",
-    multiplier: 1,
+    name: "Oz Mule",
+    price: 5500.25,
+    pic: "https://assets.hermes.com/is/image/hermesproduct/oz-mule--212295Z%2001-worn-1-0-0-800-800_g.jpg",
+    desc: "Mule in goatskin with iconic palladium plated Kelly buckle. For everyday elegance.",
   },
   {
-    name: "T-shirt",
-    price: 12.0,
-    pic: "Jan 2023 - Present",
-    multiplier: 1,
+    name: "Giulia Sandal",
+    price: 3230.89,
+    pic: "https://assets.hermes.com/is/image/hermesproduct/giulia-sandal--232130Z%20VE-front-wm-1-0-0-800-800_g.jpg",
+    desc: "Sandal in suede goatskin and calfskin with iconic palladium-plated Kelly buckle. A sleek design for a chic feminine look.",
+  },
+  {
+    name: "Deep Sneaker",
+    price: 3850.25,
+    pic: "https://assets.hermes.com/is/image/hermesproduct/deep-sneaker--222905ZHG0-worn-1-0-0-800-800_g.jpg",
+    desc: "Sneaker in ribbed suede fabric and suede goatskin. A sleek graphic design for a neo-vintage urban look.",
+  },
+  {
+    name: "Freestyle Sneaker",
+    price: 5600.89,
+    pic: "https://assets.hermes.com/is/image/hermesproduct/freestyle-sneaker--222920ZH90-worn-1-0-0-800-800_g.jpg",
+    desc: "High-top sneaker in Epsom calfskin and calfskin. A sole enhanced with a 'Clou de selle' motif, for a modern and urban look.",
   },
 ];
 

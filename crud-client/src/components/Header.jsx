@@ -1,23 +1,27 @@
-import { useState, useContext } from "react";
-import CrudContext from "../context/CrudContext";
+// import { useState, useContext } from "react";
+// import CrudContext from "../context/CrudContext";
+import LoginButton from "../auth/LoginButton";
+import LogoutButton from "../auth/LogoutButton";
+import { useAuth0 } from "@auth0/auth0-react";
+import { Link } from "react-router-dom";
 import avatar from "../assets/businessman.svg";
 import logo from "../assets/shop.svg";
 import { AiOutlineShoppingCart, AiOutlineMenu } from "react-icons/ai";
 
 const Header = () => {
-  const [login, setLogin] = useState(false);
+  const { user, isAuthenticated } = useAuth0();
 
-  const { loginStatus } = useContext(CrudContext);
+  // const { loginStatus } = useContext(CrudContext);
 
-  const loginClick = () => {
-    if (login) {
-      setLogin(false);
-    } else {
-      setLogin(true);
-    }
+  // const loginClick = () => {
+  //   if (login) {
+  //     setLogin(false);
+  //   } else {
+  //     setLogin(true);
+  //   }
 
-    loginStatus();
-  };
+  //   // loginStatus();
+  // };
 
   return (
     <div className="navbar bg-base-100">
@@ -44,14 +48,12 @@ const Header = () => {
       </div>
       <div className="navbar-center">
         <div className="flex-1">
-          <a
-            href="#"
-            target="_self"
-            className="btn btn-ghost normal-case text-xl"
-          >
-            <img src={logo} className="w-12" />
-            <h1 className="font-bold text-xl lg:text-3xl">SHINY SHOES</h1>
-          </a>
+          <Link to="/">
+            <a className="btn btn-ghost normal-case text-xl">
+              <img src={logo} className="w-12" />
+              <h1 className="font-bold text-xl lg:text-3xl">SHINY SHOES</h1>
+            </a>
+          </Link>
         </div>
       </div>
 
@@ -84,7 +86,10 @@ const Header = () => {
           <div className="dropdown dropdown-end mx-2">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
-                <img src={avatar} />
+                <img
+                  src={isAuthenticated ? user.picture : avatar}
+                  alt={isAuthenticated ? user.name : "profile pic"}
+                />
               </div>
             </label>
             <ul
@@ -92,22 +97,14 @@ const Header = () => {
               className="menu menu-md dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-semibold text-xl"
             >
               <li>
-                <a className="justify-between">
-                  Profile
-                  <span className="badge">New</span>
-                </a>
-              </li>
-              <li>
-                {login ? (
-                  <a onClick={() => loginClick()} href="#">
-                    Logout
+                <Link to="/profile">
+                  <a className="justify-between">
+                    Profile
+                    <span className="badge">New</span>
                   </a>
-                ) : (
-                  <a onClick={() => loginClick()} href="#">
-                    Register/Login
-                  </a>
-                )}
+                </Link>
               </li>
+              <li>{isAuthenticated ? <LogoutButton /> : <LoginButton />}</li>
             </ul>
           </div>
         </div>

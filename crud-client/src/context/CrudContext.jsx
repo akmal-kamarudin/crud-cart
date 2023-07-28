@@ -1,7 +1,5 @@
 import { createContext } from "react";
 
-const CrudContext = createContext({
-  loginStatus: () => {},
-});
+const CrudContext = createContext();
 
 export default CrudContext;

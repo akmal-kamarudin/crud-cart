@@ -10,13 +10,24 @@ const ContextProvider = ({ children }) => {
   const loginStatus = async () => {
     console.log("login click");
     try {
-      const response = await api.get("/Login");
+      const response = await api.get("/profile");
       const jsonData = await response;
       console.log(jsonData);
     } catch (err) {
       console.error(err.message);
     }
   };
+
+  // const loginStatus = async () => {
+  //   console.log("login click");
+  //   try {
+  //     const response = await api.get("/message");
+  //     const jsonData = await response.data.message;
+  //     console.log(jsonData);
+  //   } catch (err) {
+  //     console.error(err.message);
+  //   }
+  // };
 
   const value = {
     login,

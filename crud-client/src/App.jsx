@@ -1,4 +1,4 @@
-// import { useState } from "react";
+/* eslint-disable react/prop-types */
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";

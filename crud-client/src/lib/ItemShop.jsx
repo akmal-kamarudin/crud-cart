@@ -32,3 +32,15 @@ const ItemShop = [
 ];
 
 export default ItemShop;
+
+// CREATE TABLE items (
+//   ID SERIAL PRIMARY KEY,
+//   name VARCHAR (30),
+//   price money,
+//   pic VARCHAR (255),
+//   description VARCHAR (255),
+//   );
+
+// INSERT INTO items(name, price, pic, description)
+// VALUES ('London loafer', 5200.78, 'https://assets.hermes.com/is/image/hermesproduct/paris-loafer--231939ZA79-worn-1-0-0-800-800_g.jpg', 'Loafer in patinated goatskin with signature.')
+// RETURNING *;

@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Homepage from "./components/Homepage";
 import Profile from "./components/Profile";
+import Cart from "./components/Cart";
 import ContextProvider from "./context/ContextProvider";
 import { Auth0Provider, withAuthenticationRequired } from "@auth0/auth0-react";
 
@@ -42,6 +43,7 @@ function App() {
           <main className="flex flex-col items-stretch text-center justify-center px-8 lg:px-40 2xl:px-80 bg-slate-100">
             <Routes>
               <Route path="/" exact element={<Homepage />}></Route>
+              <Route path="/cart" exact element={<Cart />}></Route>
               <Route
                 path="/profile"
                 exact

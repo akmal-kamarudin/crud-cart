@@ -1,4 +1,4 @@
-// import { useState, useContext } from "react";
+// import { useContext } from "react";
 // import CrudContext from "../context/CrudContext";
 import LoginButton from "../auth/LoginButton";
 import LogoutButton from "../auth/LogoutButton";
@@ -11,17 +11,9 @@ import { AiOutlineShoppingCart, AiOutlineMenu } from "react-icons/ai";
 const Header = () => {
   const { user, isAuthenticated } = useAuth0();
 
-  // const { loginStatus } = useContext(CrudContext);
+  // const { testAccess } = useContext(CrudContext);
 
-  // const loginClick = () => {
-  //   if (login) {
-  //     setLogin(false);
-  //   } else {
-  //     setLogin(true);
-  //   }
-
-  //   // loginStatus();
-  // };
+  // const apiClick = () => {};
 
   return (
     <div className="navbar bg-base-100">
@@ -105,6 +97,11 @@ const Header = () => {
                 </Link>
               </li>
               <li>{isAuthenticated ? <LogoutButton /> : <LoginButton />}</li>
+              <li>
+                <Link to="/cart">
+                  <a>Test API</a>
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

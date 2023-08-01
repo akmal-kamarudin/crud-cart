@@ -101,9 +101,8 @@ app.post("/items", async (req, res) => {
 
 app.get("/api/token", async (req, res) => {
   const data = {
-    client_id: "W26HWTn0dI9lwICfpnOBrZiTs6Q5YVQL",
-    client_secret:
-      "kyjKSZtMWsLq68VGZelELZuMNdl2Ax7vMK60qmRpKy7ECwTmbaq8DPnvPniqn4hO",
+    client_id: process.env.AUTH0_CLIENT_ID,
+    client_secret: process.env.AUTH0_CLIENT_SECRET,
     audience: "https://www.cart-api.com",
     grant_type: "client_credentials",
   };

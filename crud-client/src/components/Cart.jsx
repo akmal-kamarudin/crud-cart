@@ -1,11 +1,11 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 // import axios from "axios";
 import api from "../api/shopApi";
 
 const Cart = () => {
   const { user, isAuthenticated } = useAuth0();
-  // const [userMetadata, setUserMetadata] = useState(null);
+  const [getTokens, setGetTokens] = useState(null);
 
   useEffect(() => {
     console.log(isAuthenticated);
@@ -18,13 +18,28 @@ const Cart = () => {
         console.log(response);
         console.log(accessToken);
 
+        setGetTokens(accessToken);
+
         // Use the access token as needed (e.g., send it with API requests to your /api/private endpoint)
       } catch (error) {
         console.error(error);
       }
     };
 
+    const sendTokens = async () => {
+      try {
+        const response = await api.get("/api/private");
+
+
+        // Use the access token as needed (e.g., send it with API requests to your /api/private endpoint)
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    
+
     getTokensFromBackend();
+    sendTokens();
   }, [isAuthenticated, user]);
 
   return (

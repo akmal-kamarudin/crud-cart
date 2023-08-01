@@ -10,6 +10,7 @@ const Profile = () => {
     console.log(user);
 
     const getUserMetadata = async () => {
+      
       const domain = "akmal-busy.us.auth0.com";
 
       try {

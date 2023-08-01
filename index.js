@@ -121,6 +121,7 @@ app.get("/api/token", async (req, res) => {
 
     const responseData = await response.json();
     const accessToken = responseData.access_token;
+    // console.log(accessToken);
 
     res.json({ accessToken }); // Return the access token as a JSON response
   } catch (error) {

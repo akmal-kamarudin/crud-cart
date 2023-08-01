@@ -26,12 +26,13 @@ const Auth0ProviderWithRedirectCallback = ({ children, ...props }) => {
 };
 
 function App() {
+
   return (
     <BrowserRouter>
       <ContextProvider>
         <Auth0ProviderWithRedirectCallback
           domain="akmal-busy.us.auth0.com"
-          clientId="w9LqbZwX6ZBmwO6s13cFG7iCDUu8XRew"
+          clientId={import.meta.env.VITE_AUTH0_CLIENT_ID}
           authorizationParams={{
             redirect_uri: window.location.origin,
             audience: "https://akmal-busy.us.auth0.com/api/v2/",

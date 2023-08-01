@@ -1,0 +1,1 @@
+{"version":"0.0.0","name":"crud-client","dependencies":{"@auth0/auth0-react":{"version":"2.2.0"},"axios":{"version":"1.4.0"},"react-dom":{"version":"18.2.0"},"react-router-dom":{"version":"6.14.2"},"react":{"version":"18.2.0"}}}
